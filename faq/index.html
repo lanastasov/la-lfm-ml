@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive FAQ</title>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            overflow: hidden;
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <button class="accordion">What is Liquid Foundation Model?</button>
+    <div class="panel">
+        <p>Liquid Foundation Models (LFMs) are large neural networks built from compositions of computational units belonging to a custom design space that generalize Liquid Time-constant Networks, deep signal processing layers, state-space models, and attention variants.</p>
+    </div>
+
+    <button class="accordion">What does LFMs aim to achieve?</button>
+    <div class="panel">
+        <p>LFMs aim to achieve expressiveness, efficiency, and explainability in modeling sequential data types such as video, audio, text, time-series, and signals.</p>
+    </div>
+
+    <button class="accordion">threshold gain function in ML?</button>
+    <div class="panel">
+        <p>In Machine Learning (ML), the concept of a threshold gain function can be analogously applied to decision boundaries or activation functions within models such as neural networks. Specifically, the idea relates to how these models determine whether a given input should be classified into one category or another.
+
+        For example, in binary classification problems, a threshold value (often set at 0.5) is used to decide if the predicted probability should be classified as positive or negative. If the predicted probability exceeds this threshold, the model predicts the positive class; otherwise, it predicts the negative class.
+
+        This thresholding mechanism plays a crucial role in controlling the balance between false positives and false negatives, impacting the overall performance metrics like precision and recall. Adjusting the threshold can help optimize the model's predictions according to the specific requirements of the application domain.
+
+        Additionally, activation functions like ReLU (Rectified Linear Unit) also incorporate a form of threshold logic, where any negative inputs are "clamped" to zero, essentially setting a threshold below which the function returns no output. This property contributes to their popularity in deep learning architectures due to their computational efficiency and ability to mitigate the vanishing gradient problem during training.
+
+        In summary, the notion of a threshold gain function extends beyond traditional electronics to encompass key concepts in machine learning, influencing decision-making processes and contributing to the nuanced control of model outputs across diverse applications.
+
+
+        </p>
+    </div>
+
+    <button class="accordion">tabular RL algorithm?</button>
+    <div class="panel">
+        <p>Tabular Reinforcement Learning algorithms involve using tables to represent the state-action values directly, which makes them suitable for problems with discrete states and actions. Examples include Q-learning and SARSA (State-Action-Reward-State-Action). These methods learn by updating the table entries based on the observed rewards and transitions, gradually improving the policy until an optimal strategy is found for navigating the environment effectively.
+        </p>
+    </div>
+
+    <button class="accordion">support vector classifier?</button>
+    <div class="panel">
+        <p>A Support Vector Classifier (SVC) is a type of supervised learning algorithm used for classification tasks. It operates by finding the hyperplane that best separates different classes with the maximum margin. The goal is to create a decision boundary that maximizes the distance between the closest points from each class, ensuring better generalization and robustness against overfitting. SVC can handle both linear and non-linear data through kernel tricks, making it versatile for complex datasets.</p>
+    </div>
+
+    <button class="accordion">What is Gradient Descent</button>
+    <div class="panel">
+        <p>Gradient Descent is an optimization algorithm used to minimize a function by iteratively moving towards the steepest descent as defined by the negative gradient. In machine learning, it's often used to find optimal parameters that best fit the data by minimizing the cost function. This process helps improve the accuracy of models over time.</p>
+    </div>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
